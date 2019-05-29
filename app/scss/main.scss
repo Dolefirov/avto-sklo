@@ -22,6 +22,7 @@ body{
 		span{
 			display: inline-block;
 			vertical-align: top;
+			cursor: pointer;
 		}
 		.menu-icon i{
 			display: block;
@@ -30,6 +31,11 @@ body{
 			width: 62px;
 			background-color: #f5e159;
 			box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75);
+			@media only screen and (max-width: 767px){
+				height: 4px;
+			    margin-bottom: 4px;
+			    width: 40px;
+			}
 		}
 	}
 }
@@ -55,13 +61,24 @@ body{
 	min-height: 100vh;
 	position: relative;
 	box-shadow: 0px 8px 9px -6px rgba(0,0,0,0.75);
+	@media only screen and (max-width: 767px){
+		padding: 15px 0 60px;
+	}
 	.call{
 		position: fixed;
-		bottom: 90px;
+		bottom: 30px;
 		right: 30px;
 		z-index: 9999;
+		@media only screen and (max-width: 1600px){
+			width: 80px;
+		}
+		@media only screen and (max-width: 1199px){
+			width: 70px;
+		}
 		@media only screen and (max-width: 767px){
-			width: 50px;
+			width: 35px;
+			bottom: 15px;
+			right: 15px;
 		}
 		img{
 			max-width: 100%;
@@ -69,11 +86,19 @@ body{
 	}
 	.mail{
 		position: fixed;
-		bottom: 90px;
+		bottom: 30px;
 		left: 30px;
 		z-index: 9999;
+		@media only screen and (max-width: 1600px){
+			width: 80px;
+		}
+		@media only screen and (max-width: 1199px){
+			width: 70px;
+		}
 		@media only screen and (max-width: 767px){
-			width: 50px;
+			width: 35px;
+			bottom: 15px;
+			left: 15px;
 		}
 		img{
 			max-width: 100%;
@@ -86,6 +111,8 @@ body{
 	    @media only screen and (max-width: 767px){
 	    	min-width: 290px;
 	    	text-align: center;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%)
 	    }
 		h1{
 			font-size: 64px;
@@ -163,9 +190,72 @@ body{
 				color: #fff;
 			}
 		}
+		.close {
+			position: absolute;
+			right: 32px;
+			top: 32px;
+			width: 32px;
+			height: 32px;
+			opacity: 0.3;
+			}
+			.close:hover {
+			opacity: 1;
+			}
+			.close:before, .close:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 33px;
+			width: 3px;
+			background-color: #fff;
+			}
+			.close:before {
+			transform: rotate(45deg);
+			}
+			.close:after {
+			transform: rotate(-45deg);
+			}
 	}
 }
-
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    .form-control{
+    	border-radius: 0;
+    	background-color: transparent;
+    	color: #fff;
+    }
+}
+.modal-footer {
+    padding: 0px 20px 20px;
+    margin-top: 0px;
+    border-top: 0;
+}
+.modal-header{
+	border-bottom: none;
+	padding: 15px 20px;
+	.modal-title{
+		color: #fff;
+	}
+	.close {
+	    float: right;
+	    position: absolute;
+	    top: 13px;
+	    right: 18px;
+	    font-size: 28px;
+	    font-weight: bold;
+	    line-height: 1;
+	    color: #fff;
+	    text-shadow: 0 1px 0 #fff;
+	    opacity: .4;
+	    filter: alpha(opacity=40);
+	    &:hover{
+	    	opacity: 1;
+	    }
+	}
+}
 .advantages{
 	padding: 95px 0 140px;
 	@media only screen and (max-width: 767px){

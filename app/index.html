@@ -17,7 +17,6 @@
 						<div class="menu-wr">
 							<div id="btnShowMenu" class="menu">
 								<span class="menu-icon"><i></i><i></i><i></i></span>
-								<span class="menu-text">Mеню</span>
 							</div>
 						</div>
 					</div>
@@ -36,6 +35,7 @@
 				</div>				
 			</div>	
 			<div class="header-nav">
+				<div class="menu close"></div>
 				<ul>
 					<li><a href="#about">about</a></li>
 					<li><a href="#glass">glass</a></li>
@@ -48,9 +48,62 @@
 				</a>
 			</div>	
 			<div class="mail">
-				<a href="mailto:nika@gmail.com">
+				<a href="#" data-toggle="modal" data-target="#exampleModal">
 					<img src="./img/message.png" alt="mail">
 				</a>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+								    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								</div>
+								<div class="form-group">
+								    <label class="sr-only" for="exampleInputEmail3">Address</label>
+								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Address">
+								</div>
+								<div class="form-group">
+									<select id="inputState" class="form-control">
+										<option selected>Choose...</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+								<div class="form-group">
+								    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<select id="inputState1" class="form-control">
+										<option selected>Choose...</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+								<div class="form-group">
+								    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+								    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 

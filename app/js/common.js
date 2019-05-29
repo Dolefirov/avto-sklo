@@ -32,10 +32,10 @@ function tooggleMenu() {
 $(function($){
     $(document).mouseup(function (event){
         var navContainer = $('.header-nav')
-        var btnShowMenu = $('#btnShowMenu')
+        var btnShowMenu = $('.menu')
 
         // Hide only if menu open
-        if( $('#btnShowMenu').hasClass('menuOpen') ) {
+        if( $('.menu').hasClass('menuOpen') ) {
 
           // Listen cleck on menu container
           if ( !navContainer.is(event.target)
@@ -46,6 +46,9 @@ $(function($){
               && btnShowMenu.has(event.target).length === 0 ) {
                 tooggleMenu()
             }
+          }
+          if ( btnShowMenu.is(event.target)) {
+                tooggleMenu()
           }
         }
     })
