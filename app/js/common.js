@@ -14,6 +14,20 @@ $(document).ready(function() {
         return false;
       }
   })  
+   $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('#goToTop').fadeIn();
+        } else {
+            $('#goToTop').fadeOut();
+        }
+  });
+
+  $('#goToTop').click(function() {
+      $('html, body').animate({
+          scrollTop: 0
+      }, 800);
+      return false;
+  });
 })
 
 
